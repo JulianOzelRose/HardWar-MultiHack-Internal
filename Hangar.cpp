@@ -10,8 +10,8 @@
 Hangar::Hangar()
 {
 	pHangarAddress = 0;
-	m_cTerminalName = 0;
-	m_cDisplayName = 0;
+	m_cTerminalName = "NULL";
+	m_cDisplayName = "NULL";
 	m_iClearanceLvl = 0;
 	m_iCashHeld = 0;
 	m_pdwEnemyList = 0;
@@ -27,8 +27,8 @@ Hangar::Hangar()
 Hangar::Hangar(DWORD hangarAddress)
 {
 	pHangarAddress = (DWORD)(hangarAddress);
-	m_cTerminalName = 0;
-	m_cDisplayName = 0;
+	m_cTerminalName = "NULL";
+	m_cDisplayName = "NULL";
 	m_iClearanceLvl = 0;
 	m_iCashHeld = 0;
 	m_pdwEnemyList = 0;
@@ -44,8 +44,8 @@ Hangar::Hangar(DWORD hangarAddress)
 Hangar::Hangar(DWORD modBase, DWORD offset)
 {
 	pHangarAddress = *(DWORD*)(modBase + offset);
-	m_cTerminalName = 0;
-	m_cDisplayName = 0;
+	m_cTerminalName = "NULL";
+	m_cDisplayName = "NULL";
 	m_iClearanceLvl = 0;
 	m_iCashHeld = 0;
 	m_pdwEnemyList = 0;
