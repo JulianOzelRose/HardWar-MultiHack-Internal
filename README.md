@@ -21,8 +21,8 @@ In order to print text to screen, the game's own print function was used. The ga
 address at ```HardwarW.exe+0x7B950```. The function has several parameters, and is called using __stdcall. The first
 parameter tells the game the x-coordinate of where the message is displayed on screen, and the second parameter
 tells the game the y-coordinate of the message to be displayed. The third parameter is the character string to be
-displayed, and any subsequent parameter is used for format strings suchas ```%d``` or ```%s```, much like the ```printf```
-function from C's cstdlib.
+displayed, and any subsequent parameter is used for format strings such as ```%d``` or ```%s```, much like the ```printf```
+function.
 
 
 ![decompile_Ghidra](https://user-images.githubusercontent.com/95890436/199567782-8e0e8a98-9f95-4939-8d2c-02d3c89db384.PNG)
