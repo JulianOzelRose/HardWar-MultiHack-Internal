@@ -61,6 +61,7 @@ DWORD WINAPI HackThread(HMODULE hModule)
 		Moth playerMoth = Moth(dwPlayerMoth);
 
 		if (!bRunOnce)
+		// Print injection message on screen
 		{
 			for (int i = 0; i < 700; i++)
 			{
@@ -72,6 +73,7 @@ DWORD WINAPI HackThread(HMODULE hModule)
 		}
 
 		if ((playerMoth.GetMothStatus() != IN_HANGAR) && (client.GetNavMenu() == 0))
+		// Print in-game GUI
 		{
 			PrintHUD(5, y, "MULTIHACK MENU");
 			PrintHUD(5, y + 15, "[DEL]");
@@ -84,6 +86,7 @@ DWORD WINAPI HackThread(HMODULE hModule)
 		}
 
 		if (bInstakill)
+		// Instakill on keypress
 		{
 			if (playerMoth.GetTargetEntity() != NULL)
 			{
@@ -103,6 +106,7 @@ DWORD WINAPI HackThread(HMODULE hModule)
 		}
 
 		if (bStallNegate)
+		// Negate Stall
 		{
 			if (playerMoth.GetStallLvl() > 0)
 			{
@@ -111,27 +115,32 @@ DWORD WINAPI HackThread(HMODULE hModule)
 		}
 
 		if (bSpeedHack)
+		// Enable Speedhack
 		{
 			playerMoth.SetThrust(0x4000 * 6);
 		}
 
 		if (bInvincibility)
+		// Enable Invicibility
 		{
 			if (playerMoth.GetShields() < 0x4000) { playerMoth.SetShields(MAX_DMG); }
 		}
 
 		if (GetAsyncKeyState(VK_DELETE) & 1)
+		// Toggle Speedhack
 		{
 			bSpeedHack = !bSpeedHack;
 			if (!bSpeedHack) { playerMoth.SetThrust(0); }
 		}
 
 		if (GetAsyncKeyState(VK_INSERT) & 1)
+		// Trigger Instakill
 		{
 			bInstakill = !bInstakill;
 		}
 
 		if (GetAsyncKeyState(VK_END) & 1)
+		// Un-inject DLL
 		{
 			break;
 		}
