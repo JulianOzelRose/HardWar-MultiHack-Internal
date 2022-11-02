@@ -5,16 +5,24 @@ infinite cash, and auto negate stall.
 
 # Screenshots
 
+
+Injection message being displayed
+
+
 ![Untitled-1](https://user-images.githubusercontent.com/95890436/199563029-f83fc664-7525-4404-b12c-a11a9975d286.png)
-###### Screenshot: Injection message being displayed
+
+
+In-game GUI being displayed
 
 
 ![Untitled-2](https://user-images.githubusercontent.com/95890436/199563045-9dfcf148-777f-42af-acaa-835b398c93fc.png)
-###### Screenshot: In-game GUI being displayed
+
+
+Instakill being used
 
 
 ![Untitled-3](https://user-images.githubusercontent.com/95890436/199563052-2c2d43d2-bb58-43f4-b4ee-4394405f0917.png)
-###### Screenshot: Instakill being used
+
 
 ## ```PrintHUD()```
 In order to print text to screen, the game's own print function was used. The game's print function is located on the
@@ -26,4 +34,4 @@ function.
 
 
 ![decompile_Ghidra](https://user-images.githubusercontent.com/95890436/199567782-8e0e8a98-9f95-4939-8d2c-02d3c89db384.PNG)
-###### Screenshot: Decompilation of ```HardwarW.exe+0x7B950``` from Ghidra.
+###### Decompilation of ```HardwarW.exe+0x7B950``` from Ghidra
