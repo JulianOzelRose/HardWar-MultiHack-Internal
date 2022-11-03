@@ -6,19 +6,19 @@ infinite cash, and auto negate stall.
 # Screenshots
 
 
-Injection message being displayed
+###### Injection message being displayed
 
 
 ![Untitled-1](https://user-images.githubusercontent.com/95890436/199563029-f83fc664-7525-4404-b12c-a11a9975d286.png)
 
 
-In-game GUI being displayed
+###### In-game GUI being displayed
 
 
 ![Untitled-2](https://user-images.githubusercontent.com/95890436/199563045-9dfcf148-777f-42af-acaa-835b398c93fc.png)
 
 
-Instakill being used
+###### Instakill being used
 
 
 ![Untitled-3](https://user-images.githubusercontent.com/95890436/199563052-2c2d43d2-bb58-43f4-b4ee-4394405f0917.png)
@@ -33,5 +33,7 @@ displayed, and any subsequent parameter is used for format strings such as ```%d
 function.
 
 
-![decompile_Ghidra](https://user-images.githubusercontent.com/95890436/199567782-8e0e8a98-9f95-4939-8d2c-02d3c89db384.PNG)
-###### Decompilation of ```HardwarW.exe+0x7B950``` from Ghidra
+###### Decompilation of ```HardwarW.exe+0x7B950```
+
+
+![Capture](https://user-images.githubusercontent.com/95890436/199644060-09723649-525b-48e8-8f52-c8fec442006c.PNG)
