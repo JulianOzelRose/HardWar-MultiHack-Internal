@@ -37,6 +37,7 @@ DWORD WINAPI HackThread(HMODULE hModule)
 	const DWORD FP_MOTH = 0x18FCC4;
 	const DWORD TP_MOTH = 0x596FB04;
 	const DWORD MAX_DMG = 0x4000;
+	const DWORD MAX_THRUST = 0x4000;
 
 	// Entities
 	DWORD dwPlayerEntity;
@@ -90,9 +91,9 @@ DWORD WINAPI HackThread(HMODULE hModule)
 		{
 			if (playerMoth.GetTargetEntity() != NULL)
 			{
-				if ((playerMoth.GetTargetStructureDmg() != 0x4000) && (playerMoth.GetTargetStatus() != 2) && (playerMoth.bIsTargetMoth()))
+				if ((playerMoth.GetTargetStructureDmg() != MAX_DMG) && (playerMoth.GetTargetStatus() != 2) && (playerMoth.bIsTargetMoth()))
 				{
-					playerMoth.SetTargetStructureDmg(0x4000);
+					playerMoth.SetTargetStructureDmg(MAX_DMG);
 
 					for (int i = 0; i < 700; i++)
 					{
@@ -117,13 +118,13 @@ DWORD WINAPI HackThread(HMODULE hModule)
 		if (bSpeedHack)
 		// Enable Speedhack
 		{
-			playerMoth.SetThrust(0x4000 * 6);
+			playerMoth.SetThrust(MAX_THRUST * 6);
 		}
 
 		if (bInvincibility)
 		// Enable Invicibility
 		{
-			if (playerMoth.GetShields() < 0x4000) { playerMoth.SetShields(MAX_DMG); }
+			if (playerMoth.GetShields() < MAX_DMG) { playerMoth.SetShields(MAX_DMG); }
 		}
 
 		if (GetAsyncKeyState(VK_DELETE) & 1)
