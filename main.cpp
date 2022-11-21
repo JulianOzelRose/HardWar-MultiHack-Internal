@@ -22,7 +22,6 @@ DWORD WINAPI HackThread(HMODULE hModule)
 	AllocConsole();
 	FILE* f;
 	freopen_s(&f, "CONOUT$", "w", stdout);
-	std::cout << "Injection successful\n";
 
 	DWORD dwModuleBase = (DWORD)GetModuleHandle(NULL);
 
