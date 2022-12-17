@@ -1,7 +1,7 @@
 # HardWar-Hack-Internal
-This is an internal DLL-based hack for HardWar UIM 6. This hack was not designed to function on multiplayer settings -- it is not exactly practical.
+This is an internal DLL-based hack for HardWar UIM 6. This program was not designed to function on multiplayer settings.
 Rather, the purpose of this program is to better understand data structures and runtime modification. Features of this program include speedhack, instakill,
-infinite cash, and auto negate stall.
+infinite cash, and auto negate stall. To enable the cheat, use a DLL injection tool to inject the code onto the game's binary. To toggle the speedhack, press ```VK_DELETE```. To use instakill, simply target a moth and press ```VK_INSERT```. Invincibility and auto-shield regeneration is enabled by default, but this can be changed via the source. To un-inject the DLL, press ```VK_END```.
 
 # Screenshots
 
