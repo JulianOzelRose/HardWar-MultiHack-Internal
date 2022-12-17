@@ -21,7 +21,18 @@ infinite cash, and auto negate stall.
 ###### Instakill being used
 
 
-![Untitled-3](https://user-images.githubusercontent.com/95890436/199563052-2c2d43d2-bb58-43f4-b4ee-4394405f0917.png)
+
+
+
+
+https://user-images.githubusercontent.com/95890436/208253471-9bf1ff25-4021-4d23-b135-fe87b964cc6d.mp4
+
+
+
+
+
+
+
 
 
 ## ```PrintHUD()```
