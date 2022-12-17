@@ -33,7 +33,7 @@ https://user-images.githubusercontent.com/95890436/208253686-3f4106a6-8814-40fa-
 
 ## ```PrintHUD()```
 In order to print text to screen, the game's own print function was used. The game's print function is located on the
-address at ```HardwarW.exe+0x7B950```. The function has several parameters, and is called using __stdcall. The first
+address at ```HardwarW.exe+0x7B950```. The function has several parameters, and is called using ```__stdcall```. The first
 parameter tells the game the x-coordinate of where the message is displayed on screen, and the second parameter
 tells the game the y-coordinate of the message to be displayed. The third parameter is the character string to be
 displayed, and any subsequent parameter is used for format strings such as ```%d``` or ```%s```, much like the ```printf```
