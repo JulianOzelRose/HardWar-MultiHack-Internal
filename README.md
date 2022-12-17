@@ -23,13 +23,7 @@ infinite cash, and auto negate stall.
 
 
 
-
-
-https://user-images.githubusercontent.com/95890436/208253471-9bf1ff25-4021-4d23-b135-fe87b964cc6d.mp4
-
-
-
-
+https://user-images.githubusercontent.com/95890436/208253686-3f4106a6-8814-40fa-93f1-7095b1d4e9d3.mp4
 
 
 
