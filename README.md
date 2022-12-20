@@ -152,3 +152,13 @@ The status variable on offset ```0x008``` of the cargo structure is set to 0 if 
 is located outdoors, and gets set to 1 if the cargo is located in a cargo pod. The pointer
 on offset ```0x00C``` points to the address of the moth of which it is stored in. The variable
 stored on offset ```0x004``` simply holds the quantity of the item.
+
+# Sources
+I credit Guided Hacking for my knowledge of game hacking. They have very in-depth tutorials and guides
+on how to create your own cheat tables and trainers from scratch. I highly reccommend purchasing a subscription
+if you are interested in learning game hacking. Below are links to some of the guides I used to help me create this program.
+* https://guidedhacking.com/threads/ghb1-start-here-beginner-guide-to-game-hacking.5911/
+* https://guidedhacking.com/threads/ghb0-game-hacking-bible-introduction.14450/
+* https://guidedhacking.com/threads/ghb2-beginners-guide-to-reverse-engineering.13446/
+* https://guidedhacking.com/threads/how-to-hack-any-game-tutorial-c-trainer-3-first-internal.12142/
+* https://guidedhacking.com/threads/ghb3-intermediate-guide-to-game-hacking.13495/
