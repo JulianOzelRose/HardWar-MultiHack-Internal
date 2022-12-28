@@ -5,7 +5,7 @@ infinite cash, and auto negate stall.
 
 To enable the cheat, use a DLL injection tool to inject the code onto the game's binary. To toggle the speedhack, press ```VK_DELETE```. To use instakill, simply target a moth and press ```VK_INSERT```. Invincibility, infinite cash and auto-shield regeneration are enabled by default, but this can be changed by modifying the source. To un-inject the DLL, press ```VK_END```.
 
-# Screenshots
+# Program Screenshots
 
 
 ###### Injection message being displayed
