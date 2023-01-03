@@ -28,9 +28,6 @@ DWORD WINAPI HackThread(HMODULE hModule)
 	// Game HUD print function
 	PrintHUD = (_PrintHUD)(dwModuleBase + 0x7B950);
 
-	int x = 285;
-	int y = 115;
-
 	// Game constants
 	const DWORD IN_HANGAR = 0x7FFF;
 	const DWORD FP_MOTH = 0x18FCC4;
@@ -65,7 +62,7 @@ DWORD WINAPI HackThread(HMODULE hModule)
 		{
 			for (int i = 0; i < 700; i++)
 			{
-				PrintHUD(x + 25, y, "INJECTION SUCCESSFUL");
+				PrintHUD(310, 115, "INJECTION SUCCESSFUL");
 				Sleep(2);
 			}
 
@@ -75,14 +72,14 @@ DWORD WINAPI HackThread(HMODULE hModule)
 		if ((playerMoth.GetMothStatus() != IN_HANGAR) && (client.GetNavMenu() == 0))
 		// Print in-game GUI
 		{
-			PrintHUD(5, y, "MULTIHACK MENU");
-			PrintHUD(5, y + 15, "[DEL]");
-			PrintHUD(45, y + 15, "SPEEDHACK:");
-			if (bSpeedHack) { PrintHUD(130, y + 15, "ON"); }
-			else { PrintHUD(130, y + 15, "OFF"); }
-			PrintHUD(5, y + 30, "SHIELD: %d/16384", playerMoth.GetShields());
-			PrintHUD(5, y + 45, "INSTAKILL:");
-			PrintHUD(75, y + 45, "ON");
+			PrintHUD(5, 115, "MULTIHACK MENU");
+			PrintHUD(5, 130, "[DEL]");
+			PrintHUD(45, 130, "SPEEDHACK:");
+			if (bSpeedHack) { PrintHUD(130, 130, "ON"); }
+			else { PrintHUD(130, 130, "OFF"); }
+			PrintHUD(5, 145, "SHIELD: %d/16384", playerMoth.GetShields());
+			PrintHUD(5, 160, "INSTAKILL:");
+			PrintHUD(75, 160, "ON");
 		}
 
 		if (bInstakill)
@@ -96,7 +93,7 @@ DWORD WINAPI HackThread(HMODULE hModule)
 
 					for (int i = 0; i < 700; i++)
 					{
-						PrintHUD(x + 25, y, "%s PWNED", playerMoth.GetTargetPilotName());
+						PrintHUD(310, 115, "%s PWNED", playerMoth.GetTargetPilotName());
 						Sleep(2);
 					}
 				}

@@ -24,4 +24,17 @@ namespace offsets
 	constexpr int policeHQ = 0x11C1D0;
 	constexpr int enemyList = 0x3C;
 	constexpr int navMenu = 0x141750;
+	constexpr int hangarBay0 = 0x8D8;
+	constexpr int hangarBay1 = 0x8DC;
+	constexpr int hangarBay2 = 0x8E0;
+	constexpr int hangarBay3 = 0x8E4;
+	constexpr int hangarBay4 = 0x8E8;
+	constexpr int hangarBay5 = 0x8EC;
+	constexpr int hangarCash = 0x8BC;
+	constexpr int hangarName = 0x010;
+	constexpr int entityType = 0x330;
+	constexpr int entityName = 0x4;
+	constexpr int mothOwner = 0x1D8;
+	constexpr int mothPilot = 0x2DC;
+	constexpr int stallLvl = 0x390;
 }

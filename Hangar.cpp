@@ -66,37 +66,37 @@ DWORD Hangar::GetEnemyList()
 
 DWORD Hangar::GetBay0()
 {
-	m_pdwBay0 = (DWORD*)(pHangarAddress + 0x8D8);
+	m_pdwBay0 = (DWORD*)(pHangarAddress + offsets::hangarBay0);
 	return *m_pdwBay0;
 }
 
 DWORD Hangar::GetBay1()
 {
-	m_pdwBay1 = (DWORD*)(pHangarAddress + 0x8DC);
+	m_pdwBay1 = (DWORD*)(pHangarAddress + offsets::hangarBay1);
 	return *m_pdwBay1;
 }
 
 DWORD Hangar::GetBay2()
 {
-	m_pdwBay2 = (DWORD*)(pHangarAddress + 0x8E0);
+	m_pdwBay2 = (DWORD*)(pHangarAddress + offsets::hangarBay2);
 	return *m_pdwBay2;
 }
 
 DWORD Hangar::GetBay3()
 {
-	m_pdwBay3 = (DWORD*)(pHangarAddress + 0x8E4);
+	m_pdwBay3 = (DWORD*)(pHangarAddress + offsets::hangarBay3);
 	return *m_pdwBay3;
 }
 
 DWORD Hangar::GetBay4()
 {
-	m_pdwBay4 = (DWORD*)(pHangarAddress + 0x8E8);
+	m_pdwBay4 = (DWORD*)(pHangarAddress + offsets::hangarBay4);
 	return *m_pdwBay4;
 }
 
 DWORD Hangar::GetBay5()
 {
-	m_pdwBay5 = (DWORD*)(pHangarAddress + 0x8EC);
+	m_pdwBay5 = (DWORD*)(pHangarAddress + offsets::hangarBay5);
 	return *m_pdwBay5;
 }
 
@@ -107,13 +107,13 @@ DWORD Hangar::GetHangarEntity()
 
 int Hangar::GetCashHeld()
 {
-	m_iCashHeld = (int*)(pHangarAddress + 0x8BC);
+	m_iCashHeld = (int*)(pHangarAddress + offsets::hangarCash);
 	return *m_iCashHeld;
 }
 
 char* Hangar::GetHangarName()
 {
-	m_cDisplayName = (char*)(pHangarAddress + 0x010);
+	m_cDisplayName = (char*)(pHangarAddress + offsets::hangarName);
 	return m_cDisplayName;
 }
 

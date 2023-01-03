@@ -77,7 +77,7 @@ DWORD Moth::GetMothHangarEntity()
 char* Moth::GetMothHangarName()
 {
 	m_pHangar = (DWORD*)(pMothAddress + offsets::hangar);
-	char* cHangarName = (char*)(*m_pHangar + 0x10);
+	char* cHangarName = (char*)(*m_pHangar + offsets::hangarName);
 
 	return cHangarName;
 }
@@ -109,7 +109,7 @@ void Moth::SetThrust(DWORD newThrust)
 
 DWORD Moth::GetPilotEntity()
 {
-	m_pdwPilot = (DWORD*)(pMothAddress + 0x2DC);
+	m_pdwPilot = (DWORD*)(pMothAddress + offsets::mothPilot);
 	return *m_pdwPilot;
 }
 
@@ -120,21 +120,21 @@ DWORD Moth::GetMothEntity()
 
 int Moth::GetStallLvl()
 {
-	m_iStallLvl = (int*)(pMothAddress + 0x390);
+	m_iStallLvl = (int*)(pMothAddress + offsets::stallLvl);
 	return *m_iStallLvl;
 }
 
 void Moth::NegateStall()
 {
-	m_iStallLvl = (int*)(pMothAddress + 0x390);
+	m_iStallLvl = (int*)(pMothAddress + offsets::stallLvl);
 	*m_iStallLvl = 0;
 }
 
 char* Moth::GetTargetPilotName()
 {
 	m_pTarget = (int*)(pMothAddress + offsets::target);
-	int* pTargetEntity = (int*)(*m_pTarget + 0x1D8);
-	char* cTargetName = (char*)(*pTargetEntity + 0x4);
+	int* pTargetEntity = (int*)(*m_pTarget + offsets::mothOwner);
+	char* cTargetName = (char*)(*pTargetEntity + offsets::entityName);
 
 	return cTargetName;
 }
@@ -142,7 +142,7 @@ char* Moth::GetTargetPilotName()
 char* Moth::GetMothPilotName()
 {
 	int* pEntity = (int*)(pMothAddress + offsets::pilot);
-	char* cEntityName = (char*)(*pEntity + 0x4);
+	char* cEntityName = (char*)(*pEntity + offsets::entityName);
 
 	return cEntityName;
 }
@@ -171,7 +171,7 @@ int Moth::GetTargetStatus()
 bool Moth::bIsTargetMoth()
 {
 	m_pTarget = (int*)(pMothAddress + offsets::target);
-	DWORD* dwTargetSignature = (DWORD*)(*m_pTarget + 0x330);
+	DWORD* dwTargetSignature = (DWORD*)(*m_pTarget + offsets::entityType);
 
 	if ((DWORD)(*dwTargetSignature) == 0x7FFF) { return TRUE; }
 	else { return FALSE;  }

@@ -62,7 +62,7 @@ DWORD Entity::GetEntity()
 
 char* Entity::GetEntityName()
 {
-	m_cName = (char*)(*pEntityAddress + 0x4);
+	m_cName = (char*)(*pEntityAddress + offsets::entityName);
 	return m_cName;
 }
 
