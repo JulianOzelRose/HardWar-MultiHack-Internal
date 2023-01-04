@@ -1,4 +1,4 @@
-# HardWar-Hack-Internal
+# HardWar-MultiHack-Internal
 This is an internal DLL-based hack for HardWar UIM 6. This program was not designed to function on multiplayer settings.
 Rather, the purpose of this program is to better understand data structures and runtime modification. Features of this program include speedhack, instakill,
 infinite cash, and auto negate stall.
