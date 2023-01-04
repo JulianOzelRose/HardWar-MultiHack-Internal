@@ -14,7 +14,7 @@
 #include "Entity.h"
 #include "Client.h"
 
-typedef void(__stdcall* _PrintHUD)(int xCord, int yCord, const char* string, ...);
+typedef void(__stdcall* _PrintHUD)(int xCord, int yCord, const char* cString, ...);
 _PrintHUD PrintHUD;
 
 DWORD WINAPI HackThread(HMODULE hModule)
@@ -57,8 +57,8 @@ DWORD WINAPI HackThread(HMODULE hModule)
 
 		Moth playerMoth = Moth(dwPlayerMoth);
 
-		if (!bRunOnce)
 		// Print injection message on screen
+		if (!bRunOnce)
 		{
 			for (int i = 0; i < 700; i++)
 			{
@@ -69,8 +69,8 @@ DWORD WINAPI HackThread(HMODULE hModule)
 			bRunOnce = !bRunOnce;
 		}
 
-		if ((playerMoth.GetMothStatus() != IN_HANGAR) && (client.GetNavMenu() == 0))
 		// Print in-game GUI
+		if ((playerMoth.GetMothStatus() != IN_HANGAR) && (client.GetNavMenu() == 0))
 		{
 			PrintHUD(5, 115, "MULTIHACK MENU");
 			PrintHUD(5, 130, "[DEL]");
@@ -82,8 +82,8 @@ DWORD WINAPI HackThread(HMODULE hModule)
 			PrintHUD(75, 160, "ON");
 		}
 
-		if (bInstakill)
 		// Instakill on keypress
+		if (bInstakill)
 		{
 			if (playerMoth.GetTargetEntity() != NULL)
 			{
@@ -102,8 +102,8 @@ DWORD WINAPI HackThread(HMODULE hModule)
 			bInstakill = !bInstakill;
 		}
 
-		if (bStallNegate)
 		// Negate Stall
+		if (bStallNegate)
 		{
 			if (playerMoth.GetStallLvl() > 0)
 			{
@@ -111,33 +111,33 @@ DWORD WINAPI HackThread(HMODULE hModule)
 			}
 		}
 
-		if (bSpeedHack)
 		// Enable Speedhack
+		if (bSpeedHack)
 		{
 			playerMoth.SetThrust(MAX_THRUST * 6);
 		}
 
-		if (bInvincibility)
 		// Enable Invicibility
+		if (bInvincibility)
 		{
 			if (playerMoth.GetShields() < MAX_DMG) { playerMoth.SetShields(MAX_DMG); }
 		}
 
-		if (GetAsyncKeyState(VK_DELETE) & 1)
 		// Toggle Speedhack
+		if (GetAsyncKeyState(VK_DELETE) & 1)
 		{
 			bSpeedHack = !bSpeedHack;
 			if (!bSpeedHack) { playerMoth.SetThrust(0); }
 		}
 
-		if (GetAsyncKeyState(VK_INSERT) & 1)
 		// Trigger Instakill
+		if (GetAsyncKeyState(VK_INSERT) & 1)
 		{
 			bInstakill = !bInstakill;
 		}
 
-		if (GetAsyncKeyState(VK_END) & 1)
 		// Un-inject DLL
+		if (GetAsyncKeyState(VK_END) & 1)
 		{
 			break;
 		}
