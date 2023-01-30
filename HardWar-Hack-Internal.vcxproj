@@ -160,6 +160,9 @@
     <ClInclude Include="Moth.h" />
     <ClInclude Include="Offsets.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Release\HardWar-Hack-Internal.dll" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
