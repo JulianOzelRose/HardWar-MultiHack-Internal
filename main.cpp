@@ -62,7 +62,8 @@ DWORD WINAPI HackThread(HMODULE hModule)
 		{
 			for (int i = 0; i < 700; i++)
 			{
-				PrintHUD(310, 115, "INJECTION SUCCESSFUL");
+				PrintHUD(300, 115, "HARDWAR-MULTIHACK-INTERNAL");
+				PrintHUD(315, 130, "INJECTION SUCCESSFUL");
 				Sleep(2);
 			}
 
