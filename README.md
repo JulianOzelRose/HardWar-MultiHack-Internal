@@ -10,8 +10,9 @@ To download this hack, navigate to the ```Release``` folder of this repo, then d
 
 ###### Injection message being displayed
 
+![Injection-Success-3](https://user-images.githubusercontent.com/95890436/229284726-97fb4f86-6548-469b-891d-eda0c439c209.png)
 
-![Untitled-1](https://user-images.githubusercontent.com/95890436/199563029-f83fc664-7525-4404-b12c-a11a9975d286.png)
+
 
 
 ###### GUI being displayed
