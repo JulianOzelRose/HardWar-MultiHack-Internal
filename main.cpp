@@ -6,7 +6,6 @@
 
 #include <iostream>
 #include <string>
-#include "Memory.h"
 #include "LocalPlayer.h"
 #include "Offsets.h"
 #include "Moth.h"

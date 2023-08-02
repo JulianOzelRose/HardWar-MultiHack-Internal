@@ -148,7 +148,6 @@
     <ClCompile Include="Hangar.cpp" />
     <ClCompile Include="LocalPlayer.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Memory.cpp" />
     <ClCompile Include="Moth.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -156,7 +155,6 @@
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Hangar.h" />
     <ClInclude Include="LocalPlayer.h" />
-    <ClInclude Include="Memory.h" />
     <ClInclude Include="Moth.h" />
     <ClInclude Include="Offsets.h" />
   </ItemGroup>
