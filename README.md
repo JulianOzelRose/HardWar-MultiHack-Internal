@@ -3,9 +3,13 @@ This is an internal DLL-based hack for HardWar UIM 6. This program was not desig
 Rather, the purpose of this program is to better understand data structures and runtime modification. Features of this program include speedhack, instakill,
 infinite cash, and auto negate stall. For educational purposes only.
 
-To download this hack, navigate to the **Release** folder of this repo, then download **HardWar-MultiHack-Internal.dll**. To enable the hack, use a DLL injection tool to inject the DLL onto the HardWar process. Once injected, a success message will be printed in-game. To toggle the speedhack, press **VK_DELETE**. To use instakill, simply target a moth and press **VK_INSERT**. Invincibility, infinite cash and auto-shield regeneration are enabled by default, but this can be changed by modifying the source. To un-inject the DLL, press **VK_END**.
+To download this hack, navigate to the [Release](https://github.com/JulianOzelRose/HardWar-MultiHack-Internal/tree/master/Release) folder of this repo,
+then download ```HardWar-MultiHack-Internal.dll```. To enable the hack, use a DLL injection tool to inject the DLL onto the HardWar process. I recommend using
+[this one](https://guidedhacking.com/resources/guided-hacking-dll-injector.4/). Once injected, a success message will be displayed in-game. To toggle the speedhack, press
+```VK_DELETE```. To use instakill, simply target a moth and press ```VK_INSERT```. Invincibility, infinite cash and auto-shield
+regeneration are enabled by default, but this can be changed by modifying the source code. To un-inject the DLL, press ```VK_END```.
 
-# In-Game Screenshots
+# Screenshots
 ###### Injection message being displayed
 ![Injection-Success-3](https://user-images.githubusercontent.com/95890436/229284726-97fb4f86-6548-469b-891d-eda0c439c209.png)
 
