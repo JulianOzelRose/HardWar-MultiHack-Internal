@@ -55,6 +55,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Release\HardWar-Hack-Internal.dll" />
+    <None Include="Release\HardWar-MultiHack-Internal.dll" />
   </ItemGroup>
 </Project>
