@@ -3,46 +3,27 @@ This is an internal DLL-based hack for HardWar UIM 6. This program was not desig
 Rather, the purpose of this program is to better understand data structures and runtime modification. Features of this program include speedhack, instakill,
 infinite cash, and auto negate stall. For educational purposes only.
 
-To download this hack, navigate to the ```Release``` folder of this repo, then download ```HardWar-Hack-Internal.dll```. To enable the hack, use a DLL injection tool to inject the DLL onto the HardWar process. Once injected, a success message will be printed in-game. To toggle the speedhack, press ```VK_DELETE```. To use instakill, simply target a moth and press ```VK_INSERT```. Invincibility, infinite cash and auto-shield regeneration are enabled by default, but this can be changed by modifying the source. To un-inject the DLL, press ```VK_END```.
+To download this hack, navigate to the **Release** folder of this repo, then download **HardWar-Hack-Internal.dll**. To enable the hack, use a DLL injection tool to inject the DLL onto the HardWar process. Once injected, a success message will be printed in-game. To toggle the speedhack, press **VK_DELETE**. To use instakill, simply target a moth and press **VK_INSERT**. Invincibility, infinite cash and auto-shield regeneration are enabled by default, but this can be changed by modifying the source. To un-inject the DLL, press **VK_END**.
 
 # In-Game Screenshots
-
-
 ###### Injection message being displayed
-
 ![Injection-Success-3](https://user-images.githubusercontent.com/95890436/229284726-97fb4f86-6548-469b-891d-eda0c439c209.png)
 
-
-
-
-###### GUI being displayed
-
-
+###### Multihack GUI being displayed
 ![Untitled-2](https://user-images.githubusercontent.com/95890436/199563045-9dfcf148-777f-42af-acaa-835b398c93fc.png)
 
-
 ###### Instakill being used
-
-
-
-
 https://user-images.githubusercontent.com/95890436/208253686-3f4106a6-8814-40fa-93f1-7095b1d4e9d3.mp4
 
-
-
-
-
 ## ```PrintHUD()```
-In order to print text to screen, the game's own print function was used. The game's print function is located on the
-address at ```HardwarW.exe+0x7B950```. The function has several parameters, and is called using ```__stdcall```. The first
+In order to print text to screen, this hack hooks the game's print function. The game's print function is located on the
+address at ```0x7B950```. The function has several parameters, and is called by this hack using ```__stdcall```. The first
 parameter tells the game the x-coordinate of where the message is displayed on screen, and the second parameter
 tells the game the y-coordinate of the message to be displayed. The third parameter is the character string to be
 displayed, and any subsequent parameter is used for format strings such as ```%d``` or ```%s```.
 
 
-###### Decompilation of ```HardwarW.exe+0x7B950```
-
-
+###### Decompilation of ```0x7B950``` shown in Ghidra
 ![Capture](https://user-images.githubusercontent.com/95890436/199644060-09723649-525b-48e8-8f52-c8fec442006c.PNG)
 
 # Data Structures
@@ -53,12 +34,12 @@ Memory mappings of the player, moth, hangar, and cargo data structures can be fo
 in the tables below.
 
 ## Player data structure ##
-| **Offset**     | **Variable**    | **Type**       |
-| :---           | :---            | :---           |
-| 0x004          | Name            | String[32]     |
-| 0x02C          | Status          | Integer        |
-| 0x030          | Location        | Pointer        |
-| 0x03C          | Cash            | Integer        |
+| **Offset**     | **Variable**    | **Type**   |
+| :---           | :---            | :---       |
+| 0x004          | Name            | String     |
+| 0x02C          | Status          | Integer    |
+| 0x030          | Location        | Pointer    |
+| 0x03C          | Cash            | Integer    |
 
 The location pointer on offset ```0x030``` of the player data structure
 points to the address of the moth or hangar that the player
@@ -118,20 +99,20 @@ infrared system versions.
 
 
 ## Hangar data structure ##
-| **Offset**    | **Variable**     | **Type**      |
-| :---          | :---             | :---          |
-| 0x004         | Terminal Name    | String[32]    |
-| 0x010         | Display Name     | String[32]    |
-| 0x034         | Clearance Level  | Integer       |
-| 0x03C         | Enemies List     | Pointer       |
-| 0x048         | Owner            | Pointer       |
-| 0x8BC         | Cash Held        | Integer       |
-| 0x8D8         | Bay 1            | Pointer       |
-| 0x8DC         | Bay 2            | Pointer       |
-| 0x8E0         | Bay 3            | Pointer       |
-| 0x8E4         | Bay 4            | Pointer       |
-| 0x8E8         | Bay 5            | Pointer       |
-| 0x8EC         | Bay 6            | Pointer       |
+| **Offset**    | **Variable**     | **Type** |
+| :---          | :---             | :---     |
+| 0x004         | Terminal Name    | String   |
+| 0x010         | Display Name     | String   |
+| 0x034         | Clearance Level  | Integer  |
+| 0x03C         | Enemies List     | Pointer  |
+| 0x048         | Owner            | Pointer  |
+| 0x8BC         | Cash Held        | Integer  |
+| 0x8D8         | Bay 1            | Pointer  |
+| 0x8DC         | Bay 2            | Pointer  |
+| 0x8E0         | Bay 3            | Pointer  |
+| 0x8E4         | Bay 4            | Pointer  |
+| 0x8E8         | Bay 5            | Pointer  |
+| 0x8EC         | Bay 6            | Pointer  |
 
 The variable on offset ```0x004``` of the hangar data structure holds the name of the hangar,
 as viewed from the game's perspective. The next variable on offset ```0x010``` holds the
