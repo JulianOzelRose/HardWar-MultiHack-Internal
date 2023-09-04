@@ -54,7 +54,4 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Release\HardWar-MultiHack-Internal.dll" />
-  </ItemGroup>
 </Project>
