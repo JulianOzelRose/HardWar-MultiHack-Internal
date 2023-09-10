@@ -9,7 +9,7 @@ then download ```HardWar-MultiHack-Internal.dll```. To enable the hack, use a DL
 ```VK_DELETE```. To use instakill, simply target a moth and press ```VK_INSERT```. Invincibility, infinite cash and auto-shield
 regeneration are enabled by default, but this can be changed by modifying the source code. To un-inject the DLL, press ```VK_END```.
 
-# Screenshots
+## Screenshots
 ###### Injection message being displayed
 ![Injection-Success-3](https://user-images.githubusercontent.com/95890436/229284726-97fb4f86-6548-469b-891d-eda0c439c209.png)
 
@@ -30,7 +30,7 @@ displayed, and any subsequent parameter is used for format strings such as ```%d
 ###### Decompilation of print function shown in Ghidra
 ![Capture](https://user-images.githubusercontent.com/95890436/199644060-09723649-525b-48e8-8f52-c8fec442006c.PNG)
 
-# Data structures
+## Data structures
 The player entity pointer is stored on offset
 ```0x11D9AC``` from the module's base address. The player's cash variable,
 for example, would be stored on the address at ```moduleBase + 0x11D9AC + 0x03C```.
@@ -136,7 +136,7 @@ is located outdoors, and gets set to 1 if the cargo is located in a cargo pod. T
 on offset ```0x00C``` points to the address of the moth of which it is stored in. The variable
 stored on offset ```0x004``` simply holds the quantity of the item.
 
-# Sources
+## Sources
 I credit Guided Hacking for my knowledge of game hacking. They have very in-depth tutorials and guides
 on how to create your own cheat tables and trainers from scratch. I highly reccommend purchasing a subscription
 if you are interested in learning game hacking. Below are links to some of the guides I used to help me create this program.
