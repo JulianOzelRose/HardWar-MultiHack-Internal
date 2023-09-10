@@ -19,7 +19,7 @@ regeneration are enabled by default, but this can be changed by modifying the so
 ###### Instakill being used
 https://user-images.githubusercontent.com/95890436/208253686-3f4106a6-8814-40fa-93f1-7095b1d4e9d3.mp4
 
-## ```PrintHUD()```
+## Hooking the print function
 In order to print text to screen, this hack hooks the game's print function. The game's print function is located on the
 address at ```0x7B950```. The function has several parameters, and is called by this hack using ```__stdcall```. The first
 parameter tells the game the x-coordinate of where the message is displayed on screen, and the second parameter
@@ -27,17 +27,17 @@ tells the game the y-coordinate of the message to be displayed. The third parame
 displayed, and any subsequent parameter is used for format strings such as ```%d``` or ```%s```.
 
 
-###### Decompilation of ```0x7B950``` shown in Ghidra
+###### Decompilation of print function shown in Ghidra
 ![Capture](https://user-images.githubusercontent.com/95890436/199644060-09723649-525b-48e8-8f52-c8fec442006c.PNG)
 
-# Data Structures
+# Data structures
 The player entity pointer is stored on offset
 ```0x11D9AC``` from the module's base address. The player's cash variable,
 for example, would be stored on the address at ```moduleBase + 0x11D9AC + 0x03C```.
 Memory mappings of the player, moth, hangar, and cargo data structures can be found
 in the tables below.
 
-## Player data structure ##
+#### Player ####
 | **Offset**     | **Variable**    | **Type**   |
 | :---           | :---            | :---       |
 | 0x004          | Name            | String     |
@@ -56,8 +56,7 @@ player is in a moth, a value of 2 means the player is on foot in a hangar,
 a value of 3 means the player is in a monorail car, a value of 4 means the
 player is awaiting a monorail car, and a value of 5 means the player is in a walkway.
 
-
-## Moth data structure ##
+#### Moth ####
 | **Offset**    | **Variable**     | **Type**      |
 | :---          | :---             | :---          |
 | 0x1D0         | Hangar           | Pointer       |
@@ -101,8 +100,7 @@ all have maximum values of 0x4000 (or 16384 in decimal). The hex value on
 The hex value on ```0x0BC``` stores the navigation, radar, target, and
 infrared system versions.
 
-
-## Hangar data structure ##
+#### Hangar ####
 | **Offset**    | **Variable**     | **Type** |
 | :---          | :---             | :---     |
 | 0x004         | Terminal Name    | String   |
@@ -126,8 +124,7 @@ to be restricted from human pilots. The hangar bay pointers on offsets ```0x8D8`
 ```0x8DC```, ```0x8E0```, ```0x8E4```, ```0x8E8```, and ```0x8EC``` point to the address
 of the moth that is currently in that bay.
 
-
-## Cargo data structure ##
+#### Cargo ####
 | **Offset**      | **Variable**     | **Type**      |
 | :---            | :---             | :---          |
 | 0x004           | Quantity         | Integer       |
@@ -143,8 +140,8 @@ stored on offset ```0x004``` simply holds the quantity of the item.
 I credit Guided Hacking for my knowledge of game hacking. They have very in-depth tutorials and guides
 on how to create your own cheat tables and trainers from scratch. I highly reccommend purchasing a subscription
 if you are interested in learning game hacking. Below are links to some of the guides I used to help me create this program.
-* https://guidedhacking.com/threads/ghb1-start-here-beginner-guide-to-game-hacking.5911/
-* https://guidedhacking.com/threads/ghb0-game-hacking-bible-introduction.14450/
-* https://guidedhacking.com/threads/ghb2-beginners-guide-to-reverse-engineering.13446/
-* https://guidedhacking.com/threads/how-to-hack-any-game-tutorial-c-trainer-3-first-internal.12142/
-* https://guidedhacking.com/threads/ghb3-intermediate-guide-to-game-hacking.13495/
+* [Guide - GHB0 - Game Hacking Bible Introduction](https://guidedhacking.com/threads/ghb0-game-hacking-bible-introduction.14450/)
+* [GHB1 - Start Here Beginner Guide to Game Hacking](https://guidedhacking.com/threads/ghb1-start-here-beginner-guide-to-game-hacking.5911/)
+* [GHB2 - Beginners Guide To Reverse Engineering](https://guidedhacking.com/threads/ghb2-beginners-guide-to-reverse-engineering.13446/)
+* [GHB3 - Intermediate Guide to Game Hacking](https://guidedhacking.com/threads/ghb3-intermediate-guide-to-game-hacking.13495/)
+* [How to Hack Any Game Tutorial C++ Trainer #3](https://guidedhacking.com/threads/how-to-hack-any-game-tutorial-c-trainer-3-first-internal.12142/)
